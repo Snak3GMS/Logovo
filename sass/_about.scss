@@ -1,0 +1,32 @@
+.title {
+    font-family: Philosopher;
+    font-weight: bold;
+    font-size: 30px;
+    line-height: 52px;
+    color: #000000;
+    text-align: center;
+}
+.about {
+    padding-top: 100px;
+    min-height: 770px;
+    position: relative;
+    &__descr {
+        margin-top: 20px;
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 200%;
+        text-align: center;
+        color: #000000;
+    }
+    &__img {
+        margin-top: 36px;
+        position: absolute;
+        width: 98.79vw;
+        display: flex;
+        left: 0;
+        justify-content: space-between;
+        img {
+            width: 32vw;
+        }
+    }
+}

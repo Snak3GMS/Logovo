@@ -1,0 +1,21 @@
+@media(max-width: 4000px){
+    .header {
+        &__nav {
+            padding:15px 168px 27px 166px ;
+        }
+    }
+}
+
+@media(max-width: 1439px){
+    .header {
+        &__nav {
+            padding:15px 18px 27px 16px ;
+        }
+    } 
+    .promo {
+        &__title {
+            font-size: 86px;
+            line-height: 48px;
+        }
+    }
+}
