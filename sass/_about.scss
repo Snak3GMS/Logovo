@@ -20,8 +20,8 @@
     }
     &__img {
         margin-top: 36px;
-        position: absolute;
         width: 98.79vw;
+        max-height: 500px;
         display: flex;
         left: 0;
         justify-content: space-between;
