@@ -1,0 +1,41 @@
+.program {
+    .wrapper {
+        display: flex;
+        flex-direction: column;
+    }
+    .items {
+        display: flex;
+        flex-direction: row;
+        }
+    }
+    .time {
+        padding-right: 20px;
+        max-height: 70px;
+        &::after {
+            content:"";
+            display: block;
+            height: 63px;
+            width: 1px;
+            background-color: #ddd;
+            transform: translate(56px,-6px);
+        }
+    }
+    .descr:after {
+        content:"";
+        display: block;
+        z-index: -1;
+        background: #ddd;
+        width: 15px ;
+        height: 15px;
+        transform: translate(-28px, -20px);  
+    }
+    .descr {
+        height:70px;
+        padding-left: 20px;
+        .items:nth-child(3)>.descr {
+        border:1px solid white;
+        }
+    }
+    .items:last-child>.time:after {
+        display: none;
+}
