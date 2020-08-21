@@ -1,15 +1,17 @@
 .program {
-    .wrapper {
+    padding-top: 150px;
+    &__wrapper {
         display: flex;
         flex-direction: column;
+        margin: 0 auto;   
+        margin-top: 80px;
     }
-    .items {
+    &__items {
         display: flex;
         flex-direction: row;
         }
-    }
-    .time {
-        padding-right: 20px;
+    &__time {
+        width: 55px;;
         max-height: 70px;
         &::after {
             content:"";
@@ -17,25 +19,75 @@
             height: 63px;
             width: 1px;
             background-color: #ddd;
-            transform: translate(56px,-6px);
+            transform: translate(85px,-6px);
         }
     }
-    .descr:after {
+    &__descr::before {
         content:"";
-        display: block;
+        display: inline-block;
         z-index: -1;
         background: #ddd;
         width: 15px ;
         height: 15px;
-        transform: translate(-28px, -20px);  
+        transform: translate(-57px, 6px);  
     }
-    .descr {
+    &__descr {
         height:70px;
         padding-left: 20px;
-        .items:nth-child(3)>.descr {
+        margin-left: 60px;
+        max-width: 730px;
+        &__items:nth-child(3)>.descr {
         border:1px solid white;
         }
     }
-    .items:last-child>.time:after {
+    &__items:last-child>&__time:after {
         display: none;
+    }
+}
+
+.program {
+    &__tabs {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        margin-top: 30px;
+        label {
+            cursor: pointer;
+            font-weight: normal;
+            font-size: 24px;
+            line-height: 8px;
+            text-align: center;
+            color: #000000;
+            width: 200px;
+            &::after {
+                content:"";
+                display: inline-block;
+                width: 200px;
+                height: 2px;
+                background-color: #000;
+            }
+        }
+        &>div {
+            display: none;
+        }
+        input[type="radio"]{
+            display: none;
+        }
+        &>#tab-btn-1:checked~.descr-1,
+        &>#tab-btn-2:checked~.descr-2,
+        &>#tab-btn-3:checked~.descr-3,
+        &>#tab-btn-4:checked~.descr-4{
+        display: block;
+        } 
+        #tab-btn-1:checked+label,
+        #tab-btn-2:checked+label,
+        #tab-btn-3:checked+label,
+        #tab-btn-4:checked+label{
+            color: #DEAA43;
+            margin-top: 15px;
+            &::after {
+                background-color: #DEAA43;
+            }
+        }
+    }
 }
