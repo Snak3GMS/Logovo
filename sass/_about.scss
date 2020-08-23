@@ -22,10 +22,12 @@
     &__img {
         margin-top: 36px;
         max-height: 500px;
+        min-height:0px;
         display: flex;
         left: 0;
         justify-content: space-between;
-        img {
+        &-item {
+            min-height:0px;
             width: 33%;
         }
     }
