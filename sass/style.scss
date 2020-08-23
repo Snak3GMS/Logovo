@@ -11,16 +11,11 @@
 }
 
 
-@media(max-width: 1439px){
-    .container {
-        max-width: 900px;
-        margin: 0 auto;
-    }    
-}
 
 @import "header";
 @import "promo";
 @import "about";
-@import "media";
 @import "wait";
-@import "program"    
+@import "program";
+@import "media";
+
