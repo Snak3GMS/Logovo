@@ -5,6 +5,7 @@ $(window).scroll(function() {
 	var scrolled = $(window).scrollTop();
  
 	if (navMenu.classList.contains('header__nav__show')) {
+		header.removeClass('header__out');
 		return false;
 	} else if ( scrolled > 250 && scrolled > scrollPrev ) {
 		header.addClass('header__out');
@@ -43,7 +44,7 @@ function rightSwipe() {
 	swipeY = prevClientY - lastClientY;
 	console.log(swipeX + ' ' + swipeY);
 
-	if (swipeX < 0 && swipeX < -100 && swipeY < 20 && swipeY > -20) {
+	if (swipeX < 0 && swipeX < -100 && swipeY < 40 && swipeY > -40) {
 		if (navMenu.classList.contains('header__nav__show')) {
 			return false;
 		} else {
@@ -51,7 +52,7 @@ function rightSwipe() {
 			navMenu.classList.toggle('header__nav__show');
 		}
 		}
-	if (swipeX > 0 && swipeX > 100 && swipeY < 20 && swipeY > -20 && navMenu.classList.contains('header__nav__show')) {
+	if (swipeX > 0 && swipeX > 100 && swipeY < 40 && swipeY > -40 && navMenu.classList.contains('header__nav__show')) {
 		burgerBtn.classList.toggle('burger_active');
 		navMenu.classList.toggle('header__nav__show');
 	}
