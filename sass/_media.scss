@@ -103,12 +103,111 @@
     }
     .program {
         &__descr {
-            height: 130px;
             width: 70%;
         }
         &__time:after {
-            height: 180%;
+            height: 100%;
         }
     }
 
+}
+@media(max-width: 447px){
+    .header {
+        height: 50px;
+        &__nav  {
+            flex-direction: column;
+            background-color: #f8f8f8;
+            left: -100%;
+            position: absolute;
+            width: 45vw;
+            height: 90vh;
+            justify-content: space-around;
+            padding: 0px 10px 25px 10px;
+            transition: all .4s linear;
+            & li:nth-child(4) {
+                display: none;
+            }
+        }
+        &__nav__show {
+            left: 0;
+            transition: all .4s linear;
+        }
+        .burger {
+            margin: 12px 0 0 27px;
+            height: 25px;
+            width: 25px;
+            display: inline-block;
+        }        
+        & .burger:before{
+            content: '';
+            box-shadow: 0 6px #93cce6,0 12px #93cce6;
+            position: absolute;
+            width: 20px;
+            height: 3px;
+            background: #93cce6;
+            top: 17px;
+            left: 30px;
+            border-radius: 10px;
+            transition: all .4s linear;
+        
+        }
+        .burger:after {
+            content: '';
+            box-shadow: none;
+            position: absolute;
+            width: 20px;
+            height: 0;
+            background: #93cce6;
+            top: 29px;
+            left: 30px;
+            border-radius: 10px;
+            transition: all .4s linear;  
+        }
+        & .burger_active:before{
+            content: '';
+            box-shadow: none;
+            position: absolute;
+            width: 20px;
+            height: 3px;
+            background: #93cce6;
+            top: 22px;
+            left: 30px;
+            border-radius: 10px;
+            transition: all .4s linear;
+            transform: rotate(45deg);
+        
+        }
+        & .burger_active:after{
+            content: '';
+            box-shadow: none;
+            position: absolute;
+            width: 20px;
+            height: 3px;
+            background: #93cce6;
+            top: 22px;
+            left: 30px;
+            border-radius: 10px;
+            transition: all .4s linear;
+            transform: rotate(-45deg);            
+        }
+        .logo_mobile{
+            display: block;
+        }
+    }
+    .program {
+        &__descr {
+        font-size: 14px;
+        width: 50vw;
+        line-height: 16px;
+        }
+        &__time {
+            min-height: 70px;
+            &:after{
+                height: 100%;
+            }
+        }
+        &__tabs label {
+            font-size: 18px;
+        }
+    }
 }
