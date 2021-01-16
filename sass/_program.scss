@@ -15,7 +15,7 @@
         &::after {
             content:"";
             display: block;
-            height: 63px;
+            height: 100%;
             width: 1px;
             background-color: #ddd;
             transform: translate(85px,-6px);
@@ -35,6 +35,7 @@
         padding-bottom: 10px;
         margin-left: 60px;
         max-width: 730px;
+        min-height: 50px;
         &__items:nth-child(3)>.descr {
         border:1px solid white;
         }
