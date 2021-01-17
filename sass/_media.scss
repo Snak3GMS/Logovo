@@ -114,6 +114,7 @@
 @media(max-width: 447px){
     .header {
         height: 50px;
+        border-bottom: solid 1px #00000015;
         &__link {
             font-size: 16px;
         }
@@ -123,12 +124,12 @@
             left: -100%;
             top: 50px;
             position: absolute;
-            width: 45vw;
+            width: 40%;
             height: 45vh;
             justify-content: space-around;
-            padding: 0px 10px 10px 10px;
+            padding: 0px 10px 10px 25px;
             transition: all .4s linear;
-            border: solid 1px #000000b3;
+            border: solid 1px #00000015;
             border-left: none;
             border-top: none;
             border-radius: 0 0 10px 0;
