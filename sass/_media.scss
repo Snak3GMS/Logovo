@@ -114,16 +114,24 @@
 @media(max-width: 447px){
     .header {
         height: 50px;
+        &__link {
+            font-size: 16px;
+        }
         &__nav  {
             flex-direction: column;
             background-color: #f8f8f8;
             left: -100%;
+            top: 50px;
             position: absolute;
             width: 45vw;
-            height: 90vh;
+            height: 45vh;
             justify-content: space-around;
-            padding: 0px 10px 25px 10px;
+            padding: 0px 10px 10px 10px;
             transition: all .4s linear;
+            border: solid 1px #000000b3;
+            border-left: none;
+            border-top: none;
+            border-radius: 0 0 10px 0;
             & li:nth-child(4) {
                 display: none;
             }

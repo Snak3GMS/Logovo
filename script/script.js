@@ -44,7 +44,7 @@ function rightSwipe() {
 	swipeY = prevClientY - lastClientY;
 	console.log(swipeX + ' ' + swipeY);
 
-	if (swipeX < 0 && swipeX < -100 && swipeY < 40 && swipeY > -40) {
+	if (swipeX < 0 && swipeX < -80 && swipeY < 60 && swipeY > -60) {
 		if (navMenu.classList.contains('header__nav__show')) {
 			return false;
 		} else {
@@ -52,7 +52,7 @@ function rightSwipe() {
 			navMenu.classList.toggle('header__nav__show');
 		}
 		}
-	if (swipeX > 0 && swipeX > 100 && swipeY < 40 && swipeY > -40 && navMenu.classList.contains('header__nav__show')) {
+	if (swipeX > 0 && swipeX > 80 && swipeY < 60 && swipeY > -60 && navMenu.classList.contains('header__nav__show')) {
 		burgerBtn.classList.toggle('burger_active');
 		navMenu.classList.toggle('header__nav__show');
 	}
@@ -60,7 +60,7 @@ function rightSwipe() {
 
 const burgerBtn = document.querySelector('.burger'),
 	  navMenu = document.querySelector('.header__nav'),
-	  navLinks = document.querySelectorAll('.header__link');
+	  navLinks = document.querySelectorAll('.header__links');
 
 burgerBtn.addEventListener('click', ()=>{
 	burgerBtn.classList.toggle('burger_active');
